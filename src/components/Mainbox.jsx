@@ -1,7 +1,7 @@
 "use client";
-import Threedots from "./Threedots";
+import Threedots from "./Threedots"; // Import Threedots component
 
-const Mainbox = ({ currentImage }) => {
+const Mainbox = ({ currentImage, onClick }) => {
     return (
         <section className="grid grid-cols-[auto_auto_auto] -mt-5">
             <div className="col-start-1 row-start-1 pl-8 pt-32">
@@ -14,10 +14,12 @@ const Mainbox = ({ currentImage }) => {
                 <img className="w-full scale-90" src={currentImage} alt="current displayed" />
             </div>
             <div className="col-start-3 mt-56 mr-5">
-                <Threedots />
+                {/* Pass onClick to Threedots to make it functional */}
+                <Threedots onClick={onClick} />
             </div>
         </section>
     );
 };
 
 export default Mainbox;
+

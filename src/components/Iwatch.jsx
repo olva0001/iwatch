@@ -15,8 +15,8 @@ const Iwatchbox = () => {
         <div className="bg-[#C8DCE5] p-5 text-white m-40 rounded-2xl scale-[0.8]">
             <Header />
             <div className="Main">
-                {/* Pass currentImage and handleImageChange to both Mainbox and Lower */}
-                <Mainbox currentImage={currentImage} />
+                {/* Pass currentImage and handleImageChange to Mainbox and Lower */}
+                <Mainbox currentImage={currentImage} onClick={handleImageChange} /> {/* Ensure the onClick function is passed */}
                 <Lower onClick={handleImageChange} /> {/* Ensure the onClick function is passed */}
             </div>
         </div>
@@ -24,3 +24,4 @@ const Iwatchbox = () => {
 };
 
 export default Iwatchbox;
+
